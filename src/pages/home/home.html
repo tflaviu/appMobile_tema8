@@ -7,8 +7,11 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-item>
+      <ion-label color="primary">Phone Number</ion-label>
+      <ion-input clearInput type="number" name="userPhoneNumber" [(ngModel)]="userPhoneNumber" min="0" placeholder="Your Number" (ngModelChange)="onInputChange($event)"></ion-input>
+    </ion-item>
+  <ion-item>
+      <ion-label color="primary">Output: {{ phoneNumber ? (phoneNumber | formatNumber) : '' }}</ion-label>
+  </ion-item>
 </ion-content>
